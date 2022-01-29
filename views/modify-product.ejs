@@ -1,0 +1,33 @@
+<%- include('./partials/head', { title:'Product', hojaCss:'styles-create-product'}) %>
+<%- include('./partials/header') %>
+    <main>
+        <section class="title-section">
+            <h2>Modificar Producto</h2>
+        </section>
+        <section class="form-section">
+            <form action="/products/<%= wantedProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="form">
+                <label for="name">Nombre del producto</label>
+                <input type="text" name="Nombre" id="name" value=" <%= wantedProduct.name %>">
+                <label for="description" >Descripción</label>
+                <input type="text" name="Descripcion" id="description" value=" <%= wantedProduct.description %>">
+                <label for="img">Imagenes</label>
+                <input type="file" name="Image" id="img" accept=".jpg, .png, .jpeg, .tif, .tiff" multiple class="file-input">
+                <label for="category">Categoría</label>
+                <select name="category" id="category" class="select">
+                    <% for (let i = 0; i < categories.length; i++) {  %> 
+
+                        <option value="<%= categories[i].id %> "> <%= categories[i].name %>  </option>
+                      
+                            <% } %> 
+                </select>
+                <label for="Price">Precio</label>
+                <input type="text" name="Price" id="Price" value=" <%= wantedProduct.Price %>">
+                <button type="submit">modificar</button>
+            </form>
+        </section>
+    </main>
+<%- include('./partials/footer') %> 
+    <script src="http://localhost:3050/js/prueba.js"></script>
+    <script src="../../../js/formValidationProduct.js"></script>
+</body>
+</html>

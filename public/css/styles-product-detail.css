@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+li {
+    font-family: 'Poppins', sans-serif; 
+    list-style: none;
+}
+
+h1{
+    font-family: 'Antonio', sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    font-size: 39px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif; 
+}
+
+h2, h3, h4{
+    font-family: 'Poppins', sans-serif; 
+}
+
+h3 {
+    background-color: black;
+    color: #F8F8F4;
+    padding-left: 2px;
+    width: 100%;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+main section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+main section article {
+    margin-top: 20px;
+}
+
+.support-img {
+    display: none;
+}
+
+.main-img {
+    width: 100%;
+    /*box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;*/
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: solid #DADDD9 1px;
+    padding-bottom: 5px;
+}
+
+.price {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.category {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form button {
+    background-color: black;
+    color: white;
+}
+
+.img-offer {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-link1 {
+    width: 50%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    transition: border 3s;
+}
+
+.img:hover {
+    border: solid black 1px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    justify-content: center
+}
+
+footer section p {
+    color: #8B8D8A;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-left: 14%;
+}
+
+.style-bar2 {
+    height: 1px;
+    background: black;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.footer-icons {
+    align-self: flex-end;
+    margin-right: 12%;
+    margin-top: 5px;
+}
+
+.icon-link-footer {
+    color: black;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.footer-list {
+    color: #8B8D8A;
+    list-style-type: none;
+    padding-left: 5px;
+    font-size: 13px;
+}
+
+.contact-header {
+    display: inline-block;
+}
+
+.contacto {
+    margin-left: 20px;
+}
+
+.casa-malewo {
+    margin-left: 10%;
+}
+
+@media(min-width: 542px){
+    .logo-img{
+        display:block
+    }
+    nav{
+        display: flex;
+    }
+    .header-social-icons{
+        display: flex;
+    }
+    header div.top-header{
+        justify-content: center;
+        padding: 0;
+    }
+    header div.top-header div.burger{
+        display: none;
+    }
+    header div.top-header img{
+        display: flex;
+        
+    }
+    h1{
+        align-self: flex-start;
+    }
+    header div.top-header div.carrito  {display: none;
+    }
+    .inicio-sesion{
+        display: flex;
+    }
+}
+
+@media(min-width: 938px){
+    main{
+        margin-top: 160px;
+    }
+    form {
+        margin-bottom: 0px;
+    }
+    .img-link1 {
+        width: 25%;
+    }
+    .support-img {
+        display: inline-block;
+        width: 20%;
+    }
+    .support-img-ind {
+        height: 49.5%;
+        width: 100%;
+    }
+    .main-img-article {
+        width: 30%;
+    }
+    .main-img {
+        width: 100%;
+        height: 100%;
+    }
+    .info-buy-article {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    .description {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .quantity {
+        display: flex;
+        flex-direction: column;
+    }
+    .secondary-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .offers {
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+    .style-bar2 {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    .titulo{
+        padding: 0 15% 5%;
+    }
+    .article{
+        padding: 17px;
+    }
+    .destacados{
+        padding: 0 15%;
+    }
+    .footer-icons {
+        margin-right: 12.5%;
+    }
+    .contacto {
+        margin-left: 10%;
+    }
+    .casa-malewo {
+        margin-left: 14%;
+    }
+}

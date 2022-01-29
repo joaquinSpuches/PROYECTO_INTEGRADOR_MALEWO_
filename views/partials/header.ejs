@@ -1,0 +1,101 @@
+
+<body>
+    <header>
+
+        <div class="top-header">
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="header-social-icons">
+                <a href="https://www.instagram.com" class="icon-link-header"><i class="fab fa-instagram header-icon"></i></a>
+                <a href="https://www.facebook.com" class="icon-link-header"><i class="fab fa-facebook-square header-icon"></i></a>
+            </div>
+            <a class="logo-img" href="/" style="text-decoration: none;">
+                <img src="/img/logo.jpg" alt="logo">
+            </a>
+            <a href="/" style="text-decoration: none;">
+                <h1>CASA MALEWO</h1>
+            </a>
+            
+            <% if (locals.isLogged) { %>                
+  
+            <div class="carrito">
+                <a href="/compras">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+            <% } else { %>
+                <div class="carrito">
+                <a href="/login">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+
+          <%  } %>
+           
+        </div>
+        <div class="inicio-sesion">
+            <ul class="login-ul">
+                <% if (locals.isLogged) { %> 
+
+                <li>
+                    <a href="/compras"><i class="fas fa-shopping-bag header-icon"></i></a>
+                </li>>
+                <div class='user-bar user-bar-pc font'>
+                      
+                    <!-- <a class="font" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/img/userImg/" width="40" style="border-radius: 100%;">
+                        Hi User
+                    </a> -->
+                        <ul class="font" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" style= 'color:white; text-decoration: none;' href="/profile">Mi Perfil</a>
+                                <li style='padding-right: 12px;'><hr></li>
+                                <a class="dropdown-item" style= 'color:white; text-decoration: none;' href="/logout">Cerrar Sesion</a>
+                            </ul>
+           
+                <% }else { %>
+                <li>
+                    <i class="far fa-user-circle header-icon"></i>
+                    <a href="/login"> INICIAR SESIÓN</a>
+                </li>
+                <% } %>
+                
+            </ul>
+        </div>
+        <div class="barra">
+            
+                <ul class="nav-ul">
+                    
+                    <% if (locals.isLogged) { %> 
+                      <div class='user-bar-celu user-bar font'>
+                      
+                            <!-- <a class="font" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/img/userImg/" width="40" style="border-radius: 100%;">
+                                Hi User
+                            </a> -->
+                            <ul class="font" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" style= 'color:white; text-decoration: none;' href="/profile">My profile</a>
+                                <li style='padding-right: 12px;'><hr></li>
+                                <a class="dropdown-item" style= 'color:white; text-decoration: none;' href="/logout">Logout</a>
+                            </ul>
+                   
+                    </div>
+                    <% } %>
+                    <li class="top-1">
+                        <a href="/" class="a-inicio">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="/products">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="/info">¿QUIENES SOMOS?</a>
+                    </li>
+                    <li>
+                        <a href="/blog">BLOG</a>
+                    </li>
+                </ul>
+           
+        </div>
+    </header>

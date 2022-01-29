@@ -1,0 +1,87 @@
+main {
+    margin-top: 95px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.title-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.form-section {
+    margin-top: 20px;
+}
+
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+input {
+    margin-top: 8px;
+    width: 100%;
+    border: solid 2px #DADDD9;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+label {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.file-input {
+    border: none;
+}
+
+button {
+    width: 30%;
+    margin-top: 60px;
+    align-self: center;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.select{
+    width: 100%;
+}
+
+.ok {
+    color: #000000;
+}
+
+.notOk {
+    color: red
+}
+.error-border {
+    border: solid 1px red;
+}
+
+@media (min-width: 1000px) {
+    .title-section {
+        margin-top: 130px;
+    }
+    .form-section form {
+        align-items: flex-start;
+        margin-left: 30%;
+    }
+    input {
+        width: 60%;
+    }
+    button {
+        width: 10%;
+        position: relative;
+        right: 20.3%;
+    }
+    .select{
+        width: 60%;
+    }
+}

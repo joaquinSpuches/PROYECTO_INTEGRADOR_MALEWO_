@@ -1,0 +1,27 @@
+<%- include('./partials/head', { title:'Blog', hojaCss:'styles-profile'}) %>
+<%- include('./partials/header') %>
+<main>
+        <section class="name-picture">
+            <h2>Hola <%= user.name %>!</h2>
+            <img src="/img/userImg/<%= user.img %>  " class="prfImg">
+        </section>
+        <div class="style-bar1"></div>
+        <section class="main-info">
+            <h3 class="email">Email:</h3> <p> <%= user.email %></p>
+            <h3>tel: +<%= user.phone %></h3>
+            <a href="/compras" class="button-link">
+                <button><i class="fas fa-shopping-bag"></i></button>
+            </a>
+            <a href="/userEdit/<%= user.id %>" class="button-link">
+                <button>Editar</button>
+            </a>
+            <form action="/deleteUser/<%= user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                <button type="submit" class="deleteBtn"> Eliminar Perfil</button>
+            </form>
+        </section>
+</main>
+
+<%- include('./partials/footer') %> 
+    <script src="../js/prueba.js"></script>
+</body>
+</html>

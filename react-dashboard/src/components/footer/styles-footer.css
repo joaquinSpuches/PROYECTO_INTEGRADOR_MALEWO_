@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    margin-bottom: 20px;
+    justify-content: center
+}
+
+footer section p {
+    color: #8B8D8A;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-left: 14%;
+}
+
+.style-bar2 {
+    height: 1px;
+    background: black;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.footer-icons {
+    align-self: flex-end;
+    margin-right: 12%;
+    margin-top: 5px;
+}
+
+.icon-link-footer {
+    color: black;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.footer-list {
+    color: #8B8D8A;
+    list-style-type: none;
+    padding-left: 5px;
+    font-size: 13px;
+}
+
+.contact-header {
+    display: inline-block;
+}
+
+.contacto {
+    margin-left: 20px;
+}
+
+.casa-malewo {
+    margin-left: 10%;
+}

@@ -1,0 +1,28 @@
+<%- include('./partials/head', { title:'Product', hojaCss:'styles-product-managment'}) %>
+<%- include('./partials/header') %>
+<main>
+    <section class="main-title">
+        <h3 class="create-account">Lista de Productos</h3>
+        <div class="style-barA"></div>
+    </section>
+    <section class="products">
+        <% products.forEach(prod => {%>
+            <div class="product-list">
+                <div class="name-buttons">
+                    <%= prod.name %>
+                    <form action="/products/managment" method="POST">
+                        <button type="submit" name="action" value="edit">Editar</button>
+                        <button type="submit" name="action" value="delete">Borrar</button>
+                        <input type="text" name="id" value="<%= prod.id %>" class="hidden-input">
+                    </form>
+                </div>
+                <div class="style-barB"></div>
+            </div>
+        <% }) %>
+    </section>
+    <a href="/dashboard/" class="dashboardLink">DASHBOARD</a>
+</main>
+<%- include('./partials/footer') %> 
+    <script src="../js/prueba.js"></script>
+</body>
+</html>

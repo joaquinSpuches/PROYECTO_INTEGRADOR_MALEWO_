@@ -1,0 +1,78 @@
+<%- include('./partials/head', { title:'Carrito', hojaCss:'styles-compras'}) %>
+
+<%- include('./partials/header') %>
+    <main>
+        <section class="titulo">
+            <h2 class="title-line">MI COMPRA </h2>
+        </section>
+        <section class="lista-compras">
+            <section class="products">
+                <% products.forEach(product => { %>
+                    <h2 class="title-line-grey"></h2>
+                    <section class="compra">
+                        <div class="producto">
+                            <div class="product-name-icon">
+                                <div class="item-carro">
+                                    <img src="img\productos\<%= product.productFound.img %>" alt="">
+                                    <h3><%= product.productFound.name %></h3>
+                                </div>
+                                <div class="titles-box">
+                                    <div class="precio-cantidad">
+                                        <div class="precio-unitario">
+                                        <p>PRECIO UNITARIO</p>
+                                        <p class="precioU" style="margin-bottom: 15px;">$<%= product.productFound.Price %></p>
+                                        </div>
+                                        <div class="cantidad">
+                                        <p>CANTIDAD</p>
+                                        <div class="cantidadNum">
+                                            <p class="cantidadNum"><%= product.quantity %></p>
+                                        </div>
+                                        <form action="/deleteItemFromCart/<%= product.productFound.id %>" method="post" class="cross">
+                                            <button type="submit" id="cross"><i class="fas fa-times"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <h2 class="title-line-grey"></h2>
+                    <% }) %>
+            </section>
+            <section class="shop-box">
+                    <div class="resumen-de-compras">
+                        <h3>RESUMEN DE COMPRA</h3>
+                        <section class="titulo" style="padding-top: 0px;">
+                            <h2 class="title-line"></h2>
+                        </section>
+                        <div class="suma-productos">
+                            <% products.forEach(product => { %>
+                                <div class="totales">
+                                    <p>
+                                        <%= product.productFound.name %>
+                                        x 
+                                        <%= product.quantity %>
+                                    </p>
+                                    <p>
+                                        <%= product.quantity * product.productFound.Price%>
+                                    </p>
+                                </div>
+                            <% }) %>
+                            <div class="totales" style="margin-bottom: 53px;">
+                                <p style="font-weight: bold;">TOTAL</p>
+                                <p>$<%= total %></p>
+                            </div>
+                        </div>
+                        <form action="/confirmedBuy" method="POST">
+                            <button class="buyBtn">COMPRAR</button>
+                        </form>
+                    </div>
+            </section>
+        </section>
+
+    </section>
+    </main>
+<%- include('./partials/footer') %> 
+    <script src="../js/prueba.js"></script>
+</body>
+
+</html>

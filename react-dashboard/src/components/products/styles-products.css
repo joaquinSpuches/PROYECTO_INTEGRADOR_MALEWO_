@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+.productUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0%;
+    display: none;
+}
+
+.new-ul {
+    display: block;
+}
+
+.products {
+    width: 45%;
+    padding-bottom: 5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 2.5%;
+}
+
+.productsDrop {
+    display: inline-block;
+}

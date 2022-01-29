@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+.categories {
+    width: 45%;
+    padding-bottom: 5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 2.5%;
+}
+
+.title {
+    margin-bottom: 10px;
+    font-family: 'Antonio', sans-serif;
+    margin-top: 5%;
+}
+
+.totalTitle {
+    font-family: 'Antonio', sans-serif;
+    margin-bottom: 15px;
+}
+
+.list {
+    padding: 0%;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 5%;
+}
+
+.titleDrop {
+    font-size: 19px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-left: 2%;
+}
+
+p {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 5%;
+    display: none;
+}
+
+.new-p{
+    display: inline-block;
+}
+
+i {
+    cursor: pointer;
+}
+
+i:hover {
+    color: #DADDD9;
+}
+

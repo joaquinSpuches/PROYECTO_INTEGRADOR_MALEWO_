@@ -1,0 +1,60 @@
+<%- include('./partials/head-index') %>
+    <%- include('./partials/header') %>
+        <section class="main-banner" id="main-banner">
+            <div class="imgBanner" id="imgBanner3">
+                <div class="textBanner">
+                    <h2>Decoraciones de Exterior</h2>
+                    <p>Dale vida a tu hogar</p>
+                </div>
+            </div>
+            <div class="imgBanner" id="imgBanner2">
+                <div class="textBanner">
+                    <h2>Utileria</h2>
+                    <p>Animate a cuidar tu huerta</p>
+                </div>
+            </div>
+            <div class="imgBanner" id="imgBanner1">
+                <div class="textBanner">
+                    <h2>Decoraciones de Interior</h2>
+                    <p>Tu jardin con mas estilo</p>
+                </div>
+            </div>
+        </section>
+        <main>
+            <section class="productos-disponibles">
+                <!-- <article class="a1"> -->
+                <article  class="article-hover">
+                    <a href="/products?cat=2"><img src="img\img-home\Screenshot_20.png" alt="maceta1"></a>
+                    <p class="p1">INTERIOR</p>
+                </article>
+                <article class="article-hover">
+                    <!-- <article class="a2"> -->
+                    <a href="/products?cat=1"><img src="img\img-home\macetas-de-exterior-de-diseno.jpg" alt="maceta2"></a>
+                    <p class="p2">EXTERIOR</p>
+                </article>
+                <article class="article-hover">
+                    <!-- <article class="a3"> -->
+                    <a href="/products?cat=3"><img src="img\accesorios\Screenshot_15.png" alt=""></a>
+                    <p class="p3">ACCESORIOS</p>
+                </article>
+            </section>
+            <section class="titulo">
+                <h2 class="title-line">DESTACADOS </h2>
+            </section>
+
+            <section class="destacados">
+                <% rooster.forEach(product => { %>
+                <article class="article-hover">
+                    <a href="/products/product/<%= product.id %>"><img src="img\productos\<%= product.img %>" alt="maceta1"></a>
+                    <p><%= product.name %></p>
+                </article>
+                <% }) %>
+            </section>
+
+        </main>
+        <%- include('./partials/footer') %>
+            <script src="../js/prueba.js"></script>
+            <script src="../js/bannerSliding.js"></script>
+            </body>
+
+            </html>

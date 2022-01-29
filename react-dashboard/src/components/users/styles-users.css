@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+.users {
+    width: 45%;
+    padding-bottom: 5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 2.5%;
+}
+
+.usersDrop {
+    display: inline-block;
+}

@@ -1,0 +1,58 @@
+<%- include('./partials/head', { title:'Products', hojaCss:'styles-products'}) %>
+
+<%- include('./partials/header') %>
+    <main>
+        
+        <section class="titulo">
+            <h2 class="title-line">PRODUCTOS </h2>
+        </section>
+        
+        <div class="filtros">
+            <p></i>Filtros </p> <img src="/img/filter.png" alt="">
+        </div>
+        
+        <section class="buscador">
+                
+    
+            <input type="search" name="busquedamusica" placeholder="buscar productos">
+            <i class="fas fa-search" style="color: grey;"></i>        
+            <!-- <input type="submit" value="Buscar"> -->
+        
+        </section>
+       
+        <section class="catalogo">
+            <div class="lista-filtros">
+                <h2 class="title-line-grey"></h2>
+                <ul class="ul-side">
+                    <li class="categoryLink"> <a href="/products?cat=2">MACETAS DE INTERIOR</a></li>
+                    <li class="categoryLink"> <a href="/products?cat=1"> MACETAS DE EXTERIOR</a></li>
+                    <li style="margin-top: 7px;" class="categoryLink"><a href="/products?cat=3"> ACCESORIOS </a></li>
+                    <li class="categoryLink"> <a href="/products"> TODOS</a></li>
+                </ul>
+                <h2 class="title-line-grey"></h2>
+                <% if (confirmation === true) { %>
+                <ul class="ul-side">
+                    <li class="categoryLink"><a href="/products/create">CREAR PRODUCTO</a></li>
+                    <li class="categoryLink"><a href="/products/managment">GESTION DE PRODUCTOS</a></li>
+                </ul>
+                <h2 class="title-line-grey"></h2>
+                <%} else %>
+            </div>
+           
+            <div class="lista-de-productos">
+                <% productList.forEach(prod => { %>
+                <article class="article-hover">
+                    <a href="/products/product/<%= prod.id %>"><img src="/img/productos/<%= prod.img %>" alt="maceta <%= prod.id %>"></a>
+                    <p><%= prod.name %> </p>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+
+    </main>
+<%- include('./partials/footer') %> 
+    <script src="../js/prueba.js"></script>
+    <script src="../js/filtro.js"></script>
+
+
+</body>

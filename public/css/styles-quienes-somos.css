@@ -1,0 +1,36 @@
+main{
+    margin-top: 95px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative
+}
+main h1 {
+    color:black;
+    margin-top: 40px;
+    width: 100%;
+}
+
+main p{
+    margin-top: 40px;
+    text-align: center;
+    padding: 10px 10%;
+
+    width: 100%;
+}
+main img{
+    width: 40%;
+    margin-top: 50px;
+    position: relative;
+    bottom: -150px;
+    
+}
+
+@media(min-width:542px){
+    main p {
+        padding: 10px 18%;
+    }
+    main img{
+        width: 20%;
+    }
+}

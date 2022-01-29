@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+.h1{
+    font-family: 'Antonio', sans-serif;
+    color: white;
+    font-size: 39px;
+}
+.header {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.logo-img {
+    display: none;
+}
+.header-social-icons {
+    position: absolute;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.icon-link-header {
+    color: white;
+}
+
+@media(min-width: 1000px){
+    .header-social-icons {
+        flex-direction: row;
+        right: 1%;
+    }
+    .icon-link-header {
+        margin-left: 10px;
+    }
+    .logo-img { 
+        display: block;
+        width: 45px;
+        height: 45px;
+        align-self: center;
+        position: absolute;
+        left: 0.5%;
+    }
+}

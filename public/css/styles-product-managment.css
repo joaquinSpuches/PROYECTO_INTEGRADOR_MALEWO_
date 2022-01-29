@@ -1,0 +1,95 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 103px;
+    justify-content: center;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.style-barA {
+    height: 1px;
+    background: black;
+    display: inline-block;
+    width: 54%;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+
+.style-barB {
+    height: 1px;
+    background: #8B8D8A;
+    display: inline-block;
+    width: 75%;
+    margin-left: 0%;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; 
+    font-size: medium;
+    margin-top: 10px;
+    margin-left: 2.5%;
+}
+
+.hidden-input{
+    display: none;
+}
+
+.product-list div{
+    margin-bottom: 10px;
+}
+
+form {
+    display: inline;
+    margin-left: 20px;
+}
+
+button {
+    width: 15%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0%;
+}
+
+.dashboardLink {
+    margin-left: 2.5%;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 300ms;
+}
+
+.dashboardLink:hover {
+    color: #8B8D8A;
+}
+
+footer {
+    margin-top: 160px;
+}
+
+@media(min-width: 542px){
+    main{
+        margin-top: 150px;
+    }
+    .name-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    form {
+        width: 70%;
+    }
+    .style-barB {
+        width: 54%;
+    }
+}

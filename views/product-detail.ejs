@@ -1,0 +1,50 @@
+<%- include('./partials/head', { title:'Product', hojaCss:'styles-product-detail'}) %>
+<%- include('./partials/header') %>
+    <main>
+        <section class="main-section">
+            <article class="support-img">
+                <img src="/img/productos/<%= prod.img %>" alt="support-img" class="support-img-ind">
+                <img src="/img/productos/<%= prod.img %>" alt="support-img" class="support-img-ind">
+            </article>
+            <article class="main-img-article">
+                <img src="/img/productos/<%= prod.img %>" alt="main-img" class="main-img">
+            </article>
+            <article class="info-buy-article">
+                <div>
+                    <h3><%= prod.name %></h3>
+                    <p class="description"><%= prod.description %></p>
+                    <p class="category"> categoría: <%= prod.category.name %> </p>
+                    <p class="price"> Precio: $<%= prod.Price %></p>
+                </div>
+                <div>
+                    <form action="/saveProductToCart/<%= prod.id %>" method="POST">
+                        <div class="quantity">
+                            <label>Cantidad</label>
+                            <select name="quantity">
+                                <option value="1">1</option>
+                                 <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <button type="submit">AÑADIR AL CARRITO</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+        <section class="secondary-section">
+            <div>
+                <h3 class="offers">Destacados</h3>
+            </div>
+            <div class="img-offer">
+                <% productRooster.forEach(product => { %>
+                    <a href="/products/product/<%= product.id %>" class="img-link1"><img src="/img/productos/<%= product.img %>" alt="img-alt" class="img"></a>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+<%- include('./partials/footer') %> 
+    <script src="/js/prueba.js"></script>
+</body>
+</html>
