@@ -1,6 +1,6 @@
-Descripcion del sitio: pagina de venta de macetas de autor. apuntamos a gente con buen gusto.
+Descripcion del sitio: pagina de venta de macetas de autor.
 
-Integrantes : Santiago Danibele, Pedro Ytsma, Joaquin Spuches.
+Integrantes : Pedro Ytsma, Joaquin Spuches.
 
 
 refes:
