@@ -1,5 +1,5 @@
 # PROYECTO_INTEGRADOR_MALEWO_
-Pagina del proyecto integrador de Digital House
+REPOSITORIO DE ECOMMERCE DESARROLLADO CON HTML, JAVASCRIPT, CSS Y REACT. 
 
 Carpetas en el Master 
 
